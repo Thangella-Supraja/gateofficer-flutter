@@ -8,11 +8,12 @@ class NoRoleAssignedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.surfaceColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: _buildAppBar(),
-      body: const Center(
-        child: SingleChildScrollView(
-          child: NoRoleCard(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24),
+          child: const NoRoleCard(),
         ),
       ),
       floatingActionButton: _buildFab(),
@@ -43,17 +44,18 @@ class NoRoleAssignedScreen extends StatelessWidget {
 
   Widget _buildFab() {
     return SizedBox(
-      width: 64,
-      height: 64,
+      width: 56,
+      height: 56,
       child: FloatingActionButton(
         onPressed: () {},
         backgroundColor: AppColors.primaryColor,
+        elevation: 4,
         shape: const CircleBorder(),
         child: const Text(
           'D',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 28,
+            fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),

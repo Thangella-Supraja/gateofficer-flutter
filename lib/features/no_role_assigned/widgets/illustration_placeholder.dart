@@ -9,8 +9,8 @@ class IllustrationPlaceholder extends StatelessWidget {
 
   const IllustrationPlaceholder({
     super.key,
-    this.width = 220,
-    this.height = 180,
+    this.width = 240,
+    this.height = 200,
     this.icon = Icons.security,
     this.iconSize = 80,
   });
@@ -21,8 +21,8 @@ class IllustrationPlaceholder extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: AppColors.surfaceColor,
-        borderRadius: BorderRadius.circular(height / 2),
+        color: AppColors.backgroundColor,
+        shape: BoxShape.circle,
       ),
       child: Icon(
         icon,
